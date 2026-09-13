@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishab Shekhar</title>
+<style>
+  :root {
+    --navy: #0b1f3a;
+    --gold: #c9a227;
+    --grey: #5a6470;
+    --border: #e2e5e9;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #1a1a1a;
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  header { text-align: center; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 30px; letter-spacing: 2px; margin: 0; color: var(--navy); }
+  header .subtitle { font-size: 15px; color: var(--grey); margin: 10px 0 4px; }
+  header .contact { font-size: 13px; color: var(--grey); margin: 0; }
+  header .links { margin-top: 14px; }
+  header .links a {
+    display: inline-block;
+    font-size: 12px;
+    padding: 6px 14px;
+    margin: 0 4px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  header .links a:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+  h2.section {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 40px 0 12px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+  }
+
+  .about p { font-size: 15px; color: #333; }
+
+  .project, .award {
+    border-top: 1px solid var(--border);
+    padding: 18px 0;
+  }
+  .project h3, .award h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: #1a1a1a;
+    cursor: pointer;
+  }
+  .project .meta {
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .project p.summary, .award p.summary { font-size: 14px; color: #333; margin: 0 0 8px; }
+  .toggle {
+    font-size: 12px;
+    color: var(--navy);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+  }
+  .details {
+    display: none;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+  .details.open { display: block; }
+  .details img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin: 10px 0 4px;
+  }
+  .img-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0; }
+  .img-row figure { flex: 1 1 45%; margin: 0; }
+  .img-row img { width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+  .img-row figcaption { font-size: 11px; color: var(--grey); font-style: italic; text-align: center; margin-top: 4px; }
+  .skills {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--grey);
+  }
+  .skills span {
+    display: inline-block;
+    background: #f2f4f6;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin: 2px 4px 2px 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    color: var(--grey);
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>RISHAB SHEKHAR</h1>
+    <p class="subtitle">Mechanical Engineering, University of Georgia — Aerospace Engineering Certificate</p>
+    <p class="contact">rishab.shekhar@gmail.com &nbsp;|&nbsp; 404-324-8398</p>
+    <div class="links">
+      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/rishab-shekhar-520137201" target="_blank">LinkedIn</a>
+      <a href="https://github.com/rishabshekhar" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <h2 class="section">About</h2>
+  <div class="about">
+    <p>I'm a Mechanical Engineering student at the University of Georgia with an Aerospace Engineering Certificate, currently interning as a Manufacturing Engineering Intern at Gulfstream Aerospace in Savannah, GA. I serve as Chief Engineer for UGA's 2026 AIAA Design/Build/Fly team, leading 25+ members across aerodynamics, structures, avionics, and mechanisms. My project experience spans competition aircraft, NASA-funded satellite mechanisms, CubeSat structures, and Formula SAE vehicle dynamics.</p>
+  </div>
+
+  <h2 class="section">Selected Projects</h2>
+
+  <div class="project">
+    <p class="meta">UGA AIAA · Team of 25+ · Competition RC Aircraft</p>
+    <h3 onclick="toggle('p1')">2026 Design/Build/Fly — Chief Engineer</h3>
+    <p class="summary">Leading end-to-end design and manufacturing of a competition RC aircraft, coordinating 25+ members across four subteams.</p>
+    <span class="toggle" onclick="toggle('p1')">Read More ▼</span>
+    <div class="details" id="p1">
+      <p>As Chief Engineer of UGA's 2026 Design/Build/Fly team, I lead the end-to-end design and manufacturing of a competition RC aircraft, coordinating 25+ members across four subteams — aerodynamics, structures, avionics, and mechanisms — from conceptual layout through detailed design and flight testing. I built a MATLAB-based multidisciplinary design optimizer (MDO) to drive configuration tradeoffs, ran iterative CFD for lift/drag, and validated structural margins on primary mounting hardware.</p>
+      <div class="img-row">
+        <figure><img src="images/dbf_plane.png" alt="DBF competition plane"><figcaption>Our competition aircraft, signed by the team.</figcaption></figure>
+        <figure><img src="images/dbf_taxi.png" alt="DBF taxi run"><figcaption>Taxi run at the AIAA DBF flight line.</figcaption></figure>
+      </div>
+      <div class="skills">
+        <span>Parametric CAD</span><span>Structural Analysis</span><span>CFD</span><span>MATLAB MDO</span><span>Leadership</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <p class="meta">NASA-Funded ($10K) · Satellite Attitude Control</p>
+    <h3 onclick="toggle('p2')">NASA L'Space ACS3 Solar Sail Actuation — Mechanical Lead</h3>
+    <p class="summary">Designed a two-state gimbal-based actuation mechanism for solar-sail attitude control, funded by NASA.</p>
+    <span class="toggle" onclick="toggle('p2')">Read More ▼</span>
+    <div class="details" id="p2">
+      <p>Led research and design of a two-state, gimbal-based actuation mechanism for solar-sail attitude adjustment on satellite missions. Working with a cross-functional team and $10,000 in NASA funding, I conducted trade studies, ran design reviews with NASA engineers, and prototyped candidate mechanisms. I designed the gimbal mounts and attachment points in Siemens NX-12, optimizing thermal spread and load paths for the space environment.</p>
+      <div class="skills">
+        <span>Mechanism Design</span><span>Siemens NX-12</span><span>Trade Studies</span><span>NASA Design Reviews</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <p class="meta">UGA Small Satellite Research Lab · Spacecraft Structures</p>
+    <h3 onclick="toggle('p3')">LEARNSat-1 3U CubeSat Frame — Mechanical Engineer</h3>
+    <p class="summary">Designed a 3U CubeSat frame for a student-outreach spaceflight mission.</p>
+    <span class="toggle" onclick="toggle('p3')">Read More ▼</span>
+    <div class="details" id="p3">
+      <p>Designed a 3U CubeSat frame for the LEARNSat-1 mission, emphasizing structural integrity, manufacturability, and compliance with CubeSat standards. I modeled the structure in Autodesk Inventor, validated it through thermal, modal, and static FEA, and developed assembly procedures and a bill of materials. LEARNSat is an outreach mission run by UGA's Small Satellite Research Lab to make spaceflight accessible to students.</p>
+      <p><a href="https://learnsat.uga.edu/about/" target="_blank">learnsat.uga.edu/about</a></p>
+      <div class="skills">
+        <span>Autodesk Inventor</span><span>FEA</span><span>DFM</span><span>CubeSat Standards</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <p class="meta">UGA AIAA · Detachable Autonomous Flight</p>
+    <h3 onclick="toggle('p4')">Autonomous Deployable Glider — 2025 DBF Glider Team Lead</h3>
+    <p class="summary">Designed a detachable autonomous glider integrating Arduino flight control and 3D-printed components.</p>
+    <span class="toggle" onclick="toggle('p4')">Read More ▼</span>
+    <div class="details" id="p4">
+      <p>Designed and developed a detachable, autonomous glider for the DBF competition. I optimized the aerodynamic profile in XFLR5, integrated Arduino/ArduPilot control with GPS and gyroscopic sensing, and fabricated the nosecone and deployment mechanism via 3D printing and composites. After reworking the deployment system through several failed drop tests, we achieved a successful drop-and-fly. This was my introduction to DBF and the project that set my career trajectory toward aerospace.</p>
+      <div class="skills">
+        <span>Arduino/ArduPilot</span><span>XFLR5</span><span>3D Printing</span><span>Systems Integration</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <p class="meta">UGA Motorsports · Vehicle Dynamics & Manufacturing</p>
+    <h3 onclick="toggle('p5')">Formula SAE EV Suspension Design — Suspension Lead</h3>
+    <p class="summary">Redesigned suspension geometry, cutting camber gain over 80% and improving cornering grip 15%.</p>
+    <span class="toggle" onclick="toggle('p5')">Read More ▼</span>
+    <div class="details" id="p5">
+      <p>For UGA Motorsports' electric Formula SAE car, I redesigned the suspension geometry using SolidWorks, OptimumKinematics, and FEA, cutting unnecessary camber gain by more than 80% and designing tie rods that improved cornering grip by 15%. I machined uprights and rockers in the shop, using FEA to guide weight-saving material removal while holding a safety factor above 1.5.</p>
+      <div class="skills">
+        <span>SolidWorks</span><span>OptimumKinematics</span><span>FEA</span><span>CNC Machining</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section">Awards</h2>
+  <div class="award">
+    <h3>UGA Motorsports FSAE — Suspension Camber Optimization</h3>
+    <p class="summary">Reduced camber gain by more than 80% through redesigned suspension geometry, validated by FEA and OptimumKinematics.</p>
+  </div>
+
+  <footer>
+    &copy; 2026 Rishab Shekhar. Built with GitHub Pages.
+  </footer>
+
+</div>
+
+<script>
+  function toggle(id) {
+    document.getElementById(id).classList.toggle('open');
+  }
+</script>
+</body>
+</html>
