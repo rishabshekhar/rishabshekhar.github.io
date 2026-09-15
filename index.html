@@ -90,7 +90,13 @@
   .details.open { display: block; }
   .img-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0; }
   .img-row figure { flex: 1 1 45%; margin: 0; }
-  .img-row img, .img-row video { width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+.img-row img, .img-row video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
   .img-row figcaption { font-size: 11px; color: var(--grey); font-style: italic; text-align: center; margin-top: 4px; }
   .skills {
     margin-top: 10px;
@@ -133,18 +139,18 @@
 
   <h2 class="section">About</h2>
   <div class="about">
-    <p>I'm a Mechanical Engineering student at the University of Georgia with an Aerospace Engineering Certificate, currently interning as a Manufacturing Engineering Intern at Gulfstream Aerospace in Savannah, GA. I serve as Chief Engineer for UGA's 2026 AIAA Design/Build/Fly team, leading 25+ members across aerodynamics, structures, avionics, and mechanisms. My project experience spans competition aircraft, CubeSat structures, and Formula SAE vehicle dynamics.</p>
+    <p>I'm a Mechanical Engineering student at the University of Georgia with an Aerospace Engineering Certificate. Right now I'm interning as a Manufacturing Engineering Intern at Gulfstream Aerospace in Savannah, GA. I also serve as Chief Engineer for UGA's 2026 AIAA Design/Build/Fly team, where I lead 25+ members across aerodynamics, structures, avionics, and mechanisms. My project background spans competition aircraft, CubeSat structures, and Formula SAE vehicle dynamics.</p>
   </div>
 
   <h2 class="section">Selected Projects</h2>
 
   <div class="project">
     <p class="meta">UGA AIAA · Team of 25+ · Competition RC Aircraft</p>
-    <h3 onclick="toggle('p1')">2026 Design/Build/Fly — Chief Engineer</h3>
-    <p class="summary">Leading end-to-end design and manufacturing of a competition RC aircraft, coordinating 25+ members across four subteams.</p>
+    <h3 onclick="toggle('p1')">2026 Design/Build/Fly, Chief Engineer</h3>
+    <p class="summary">Leading the design and manufacturing of a competition RC aircraft with a team of 25+ students.</p>
     <span class="toggle" onclick="toggle('p1')">Read More ▼</span>
     <div class="details" id="p1">
-      <p>As Chief Engineer of UGA's 2026 Design/Build/Fly team, I lead the end-to-end design and manufacturing of a competition RC aircraft, coordinating 25+ members across four subteams — aerodynamics, structures, avionics, and mechanisms — from conceptual layout through detailed design and flight testing. I built a MATLAB-based multidisciplinary design optimizer (MDO) to drive configuration tradeoffs, ran iterative CFD for lift/drag, and validated structural margins on primary mounting hardware.</p>
+      <p>As Chief Engineer of UGA's 2026 Design/Build/Fly team, I lead the design and manufacturing of our competition RC aircraft from start to finish, coordinating 25+ members across four subteams: aerodynamics, structures, avionics, and mechanisms. I built a MATLAB based multidisciplinary design optimizer to help guide our configuration decisions, ran CFD to check lift and drag, and made sure our structural margins on the mounting hardware held up.</p>
       <div class="img-row">
         <figure><img src="images/dbf_comp_plane.png" alt="DBF competition plane"><figcaption>Our competition aircraft, signed by the team.</figcaption></figure>
         <figure>
@@ -156,7 +162,7 @@
         </figure>
       </div>
       <div class="img-row">
-        <figure><img src="images/MDO_framework.png" alt="MDO framework diagram"><figcaption>MATLAB MDO framework driving configuration selection.</figcaption></figure>
+        <figure><img src="images/MDO_framework.png" alt="MDO framework diagram"><figcaption>MATLAB MDO framework used to guide configuration selection.</figcaption></figure>
       </div>
       <div class="skills">
         <span>Parametric CAD</span><span>Structural Analysis</span><span>CFD</span><span>MATLAB MDO</span><span>Leadership</span>
@@ -166,11 +172,11 @@
 
   <div class="project">
     <p class="meta">UGA Small Satellite Research Lab · Spacecraft Structures</p>
-    <h3 onclick="toggle('p2')">LEARNSat-1 3U CubeSat Frame — Mechanical Engineer</h3>
-    <p class="summary">Designed a 3U CubeSat frame for a student-outreach spaceflight mission.</p>
+    <h3 onclick="toggle('p2')">LEARNSat-1 3U CubeSat Frame, Mechanical Engineer</h3>
+    <p class="summary">Designed a 3U CubeSat frame for a student outreach spaceflight mission.</p>
     <span class="toggle" onclick="toggle('p2')">Read More ▼</span>
     <div class="details" id="p2">
-      <p>Designed a 3U CubeSat frame for the LEARNSat-1 mission, emphasizing structural integrity, manufacturability, and compliance with CubeSat standards. I modeled the structure in Autodesk Inventor, validated it through thermal, modal, and static FEA, and developed assembly procedures and a bill of materials. LEARNSat is an outreach mission run by UGA's Small Satellite Research Lab to make spaceflight accessible to students.</p>
+      <p>I designed a 3U CubeSat frame for the LEARNSat-1 mission with a focus on structural integrity, manufacturability, and compliance with CubeSat standards. I modeled the structure in Autodesk Inventor, ran it through thermal, modal, and static FEA to validate it, and put together the assembly procedures and bill of materials. LEARNSat is an outreach mission run by UGA's Small Satellite Research Lab to make spaceflight more accessible to students.</p>
       <div class="img-row">
         <figure><img src="images/learnsat_assy.png" alt="LEARNSat-1 assembly"><figcaption>LEARNSat-1 3U CubeSat frame assembly.</figcaption></figure>
       </div>
@@ -183,11 +189,11 @@
 
   <div class="project">
     <p class="meta">UGA AIAA · Detachable Autonomous Flight</p>
-    <h3 onclick="toggle('p3')">Autonomous Deployable Glider — 2025 DBF Glider Team Lead</h3>
-    <p class="summary">Designed a detachable autonomous glider integrating Arduino flight control and 3D-printed components.</p>
+    <h3 onclick="toggle('p3')">Autonomous Deployable Glider, 2025 DBF Glider Team Lead</h3>
+    <p class="summary">Designed a detachable, autonomous glider with Arduino flight control and 3D printed parts.</p>
     <span class="toggle" onclick="toggle('p3')">Read More ▼</span>
     <div class="details" id="p3">
-      <p>Designed and developed a detachable, autonomous glider for the DBF competition. I optimized the aerodynamic profile in XFLR5, integrated Arduino/ArduPilot control with GPS and gyroscopic sensing, and fabricated the nosecone and deployment mechanism via 3D printing and composites. After reworking the deployment system through several failed drop tests, we achieved a successful drop-and-fly. This was my introduction to DBF and the project that set my career trajectory toward aerospace.</p>
+      <p>I designed and built a detachable, autonomous glider for the DBF competition. I optimized the aerodynamic profile in XFLR5, integrated Arduino and ArduPilot flight control with GPS and gyroscopic sensing, and fabricated the nosecone and deployment mechanism using 3D printing and composites. We went through several failed drop tests before reworking the deployment system enough to get a clean drop and fly. This project was actually my introduction to DBF, and it's the one that set me on the path toward aerospace.</p>
       <div class="img-row">
         <figure><img src="images/glider_CAD.png" alt="Glider CAD"><figcaption>Preliminary glider CAD.</figcaption></figure>
         <figure><img src="images/thrasher.png" alt="Thrasher photo"><figcaption>Holding our final 2025 competition plane.</figcaption></figure>
@@ -200,18 +206,18 @@
 
   <div class="project">
     <p class="meta">UGA Motorsports · Vehicle Dynamics & Manufacturing</p>
-    <h3 onclick="toggle('p4')">Formula SAE EV Suspension Design — Suspension Lead</h3>
-    <p class="summary">Redesigned suspension geometry, cutting camber gain over 80% and improving cornering grip 15%.</p>
+    <h3 onclick="toggle('p4')">Formula SAE EV Suspension Design, Suspension Lead</h3>
+    <p class="summary">Redesigned the suspension geometry, cutting camber gain by over 80% and improving cornering grip by 15%.</p>
     <span class="toggle" onclick="toggle('p4')">Read More ▼</span>
     <div class="details" id="p4">
-      <p>For UGA Motorsports' electric Formula SAE car, I redesigned the suspension geometry using SolidWorks, OptimumKinematics, and FEA, cutting unnecessary camber gain by more than 80% and designing tie rods that improved cornering grip by 15%. I machined uprights and rockers in the shop, using FEA to guide weight-saving material removal while holding a safety factor above 1.5.</p>
+      <p>For UGA Motorsports' electric Formula SAE car, I redesigned the suspension geometry using SolidWorks, OptimumKinematics, and FEA. This cut unnecessary camber gain by more than 80% and, through new tie rod designs, improved cornering grip by 15%. I also machined the uprights and rockers myself, using FEA to guide where we could remove material to save weight while still keeping a safety factor above 1.5.</p>
       <div class="img-row">
-        <figure><img src="images/full_car_assy.png" alt="Full car assembly"><figcaption>Full car assembly (for visualization).</figcaption></figure>
+        <figure><img src="images/full_car_assy.png" alt="Full car assembly"><figcaption>Full car assembly, shown for context.</figcaption></figure>
         <figure><img src="images/suspension_assy.png" alt="Suspension assembly"><figcaption>Isolated suspension assembly.</figcaption></figure>
       </div>
       <div class="img-row">
-        <figure><img src="images/rocker_assy.png" alt="Rocker FEA"><figcaption>FEA-guided material removal on rockers.</figcaption></figure>
-        <figure><img src="images/control_arms.png" alt="Control arms"><figcaption>Control arms — designed and assisted in manufacturing.</figcaption></figure>
+        <figure><img src="images/rocker_assy.png" alt="Rocker FEA"><figcaption>FEA guided material removal on the rockers.</figcaption></figure>
+        <figure><img src="images/control_arms.png" alt="Control arms"><figcaption>Control arms I designed and helped manufacture.</figcaption></figure>
       </div>
       <div class="skills">
         <span>SolidWorks</span><span>OptimumKinematics</span><span>FEA</span><span>CNC Machining</span>
@@ -222,11 +228,11 @@
   <h2 class="section">Certifications</h2>
   <div class="cert">
     <h3>Fundamentals of Engineering (FE) Exam</h3>
-    <p class="summary">Passed the FE Exam, a foundational step toward Professional Engineer (PE) licensure.</p>
+    <p class="summary">Passed the FE Exam, an important first step toward becoming a licensed Professional Engineer.</p>
   </div>
   <div class="cert">
-    <h3>Certified SolidWorks Associate (CSWA)</h3>
-    <p class="summary">Certified in SolidWorks, validating core CAD modeling and design proficiency.</p>
+    <h3>Certified SolidWorks Associate (CWSA-S)</h3>
+    <p class="summary">Certified in SolidWorks, showing proficiency in core CAD modeling and simulation.</p>
   </div>
 
   <footer>
